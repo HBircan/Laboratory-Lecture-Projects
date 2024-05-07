@@ -11,6 +11,6 @@ int main() {
 		earn = money * rate;
 		money = money + earn;
 	}
-	cout << money << endl;
+	cout << "Total amount earned is $" << money << endl;
 }
 //The result is 1628.89
