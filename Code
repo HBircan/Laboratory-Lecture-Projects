@@ -1,0 +1,16 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() {
+	cout << fixed << setprecision(2) ;
+	double money{ 1000.00 };
+	double rate{ 0.05 };
+	double earn{ 0 };
+	
+	for (unsigned int year{ 1 }; year <= 10; year++) {
+		earn = money * rate;
+		money = money + earn;
+	}
+	cout << money << endl;
+}
+//The result is 1628.89
