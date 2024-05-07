@@ -1,0 +1,32 @@
+//This code determines if the second number entered by user is multiple of the first number 
+#include <iostream>
+using namespace std;
+
+int multip(int x,int y);
+
+int main()
+{
+	int no1{ 0 }, no2{ 0 };
+
+	cout << "Enter 2 integers: ";
+	cin >> no1 >> no2;
+
+	cout << "\n" << multip(no1, no2);
+
+
+}
+
+int multip(int x,int y) {
+	if (x < y) {
+		int multi = y % x;
+		if (multi == 0) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+	else {
+		return false;
+	}
+}
