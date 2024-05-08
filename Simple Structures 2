@@ -1,0 +1,35 @@
+//This code demonstrates basic workings of structures and functions
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+const double pi = 3.14159;
+
+struct circle {
+    double radius;
+    double diameter;
+    double area;
+};
+
+circle getinfo();
+
+int main() {
+    circle c;
+    c = getinfo();
+    c.area = pi * pow(c.radius, 2.0);
+    cout << fixed << showpoint << setprecision(2);
+    cout << "The radius and the area of the circle are: \n";
+    cout << "Radius: " << c.radius << endl;
+    cout << "Area: " << c.area << endl;
+    return 0;
+}
+
+circle getinfo() {
+
+    circle tempc;
+    cout << "Enter the diameter of the circle: ";
+    cin >> tempc.diameter;
+    tempc.radius = tempc.diameter / 2;
+    return tempc;
+}
