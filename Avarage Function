@@ -1,0 +1,37 @@
+//This code includes a function that calculates the avarage for a certain number of grades entered by the user.
+//The main function determines the letter grade for the avarage.
+#include <iostream>
+using namespace std;
+
+void findavg(float totalsum, int numofgrades, float& avggrade);
+
+int main() {
+	int numofgrades;
+	float totalgrades = 0;
+	float grade;
+	float avggrade;
+
+	cout << "Enter the number of grades: ";
+	cin >> numofgrades;
+	for (int c = 1; c <= numofgrades; c++) {
+		cout << "Input a numeric grade between 0-100: ";
+		cin >> grade;
+		totalgrades = totalgrades + grade;
+	}
+	findavg(totalgrades, numofgrades, avggrade);
+	if (avggrade >= 90)
+		cout << "The grade is A" << endl;
+	else if (avggrade >= 80)
+		cout << "The grade is B" << endl;
+	else if (avggrade >= 70)
+		cout << "The grade is C" << endl;
+	else if (avggrade >= 60)
+		cout << "The grade is D" << endl;
+	else
+		cout << "The grade is F" << endl;
+
+	return 0;
+}
+void findavg(float total, int numof, float& avg) {
+	avg = total / numof;
+}
