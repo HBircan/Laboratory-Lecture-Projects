@@ -1,0 +1,23 @@
+//This code gets the radius of the circle from the user and prints the diameter, area and circumference.
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int rad {0};
+	double pi = 3.14;
+	int diameter;
+	double area;
+	double circ;
+
+	cout << "Enter the radius of the circle ";
+	cin >> rad;
+
+	diameter = 2 * rad;
+	area = pi * rad * rad;
+	circ = 2 * pi * rad;
+
+	cout << "Diameter is " << diameter << endl;
+	cout << "Area is " << area << endl;
+	cout << "Circumference is " << circ << endl;
+}
