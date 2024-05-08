@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class Square {
+private:
+	int side;
+			
+public:
+	Square();
+	Square(int);	
+	void setSide(int); 
+	int getSide(); 
+	int getArea(); 
+	int getPer();
+
+};
+Square::Square(int s) {
+	side = s;
+}
+Square::Square(){
+	side = 5;
+}
+void Square::setSide(int s) {
+	side = s;
+}
+int Square::getSide() {
+	return side;
+}
+int Square::getArea() {
+	return side * side;
+}
+int Square::getPer() {
+	return side * 4;
+}
+
+int main() {
+	int side;
+	Square box2;
+	cout << "Enter the lenght of a square's side: ";
+	cin >> side;
+	Square box1(side);//box1.setSide(side);
+	cout << "The area of the square you entered is " << box1.getArea() << "." << endl;
+	cout << "The perimeter of the square you entered is " << box1.getPer() << "." << endl;
+	cout << "\nThe area of the square #2 is " << box2.getArea() << "." << endl;
+	cout << "The perimeter of the square #2 is " << box2.getPer() << "." << endl;
+return 0;
+}
