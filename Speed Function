@@ -1,0 +1,21 @@
+//This code contains a function that calculates the speed (miles per hour).
+#include <iostream>
+using namespace std;
+
+double speed(double, double, double);
+
+int main() {
+	double miles;
+	double hours;
+	double vspeed = 0;
+	cout << "Enter the miles traveled: ";
+	cin >> miles;
+	cout << "Enter the hours traveled: ";
+	cin >> hours;
+	cout << "\nYour speed is " << speed(miles, hours, vspeed) << " miles per hour.";
+	return 0;
+}
+double speed(double m, double h, double v) {
+	v = m / h;
+	return v;
+}
