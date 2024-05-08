@@ -1,0 +1,65 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class Dayofyear {
+private:
+	int number;
+	static string days;
+	static string months[13];
+public:
+	Dayofyear(int num) :number(num) {};
+	void print() {
+		if (number == 0 || number > 365) {
+			cout << "Out of range." << endl;
+			return;
+		}
+
+		string result;
+		int month = number / 31;
+		int day;
+
+		if (number > 59 && number <= 120) {
+			number += 3;			
+		}
+		else if (number > 120 && number <= 181) {
+			number += 4;		
+		}
+		else if (number > 181 && number <= 273) {
+			number += 5;		
+		}
+		else if (number > 273 && number <= 334) {
+			number += 6;
+		}
+		else if (number > 334) {
+			number += 7;
+		}
+
+		day = number % 31;
+
+		if (number <= 31) {
+			result += Dayofyear::months[1] + " ";
+		}
+
+		if (month >= 1) {
+			result += Dayofyear::months[month+1] + " " ;
+		}
+		if (day == 0) {
+			day = 31;			
+		}
+
+		cout << result << day << endl;
+	}
+};
+
+string Dayofyear::months[13] = { "","January","February","March","April","May" ,"June" ,"July" ,"August" ,"September", "October", "November", "December"};
+
+int main() {
+	int num;
+	cout << "Enter a number between 0 and 365: ";
+	cin >> num;
+	Dayofyear date(num);
+	cout << "The day is: ";
+	date.print();
+	return 0;
+}
