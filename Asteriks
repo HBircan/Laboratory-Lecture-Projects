@@ -1,0 +1,19 @@
+//This code gets 5 numbers between 1 and 30 from the user and prints the entered amount of asteriks(*).
+#include <iostream>
+using namespace std;
+
+int main() {
+	unsigned int no{ 1 };
+
+	for (unsigned int entry{ 1 }; entry <= 5; entry++) {
+		cout << "Enter your number:";
+		cin >> no;
+
+		if (no >= 1 && no <= 30) {
+			for (int i{ 0 }; i < no; i++) {
+				cout << "*";
+			}
+			cout << endl;
+		}
+	}
+}
