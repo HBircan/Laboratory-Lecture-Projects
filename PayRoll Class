@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+
+class PayRoll {
+private:
+	double payrate;
+	double hour;
+public:
+	double getrate()const;
+	void setrate(double);
+	double gethour()const;
+	void sethour(double);
+	double gettotal()const;
+};
+
+void PayRoll::setrate(double w) {
+	payrate = w;
+}
+void PayRoll::sethour(double h) {
+	hour = h;
+}
+double PayRoll::getrate() const{
+	return payrate;
+}
+double PayRoll::gethour()const {
+	return hour;
+}
+double PayRoll::gettotal() const {	
+	return  hour * payrate;
+}
+
+int main(){
+	PayRoll x;
+	PayRoll y;
+	double rate;
+	double hour;
+	double total;
+
+	cout << "Enter pay rate for employee 1: $";
+	cin >> rate;
+	cout << "Enter hour for employee 1: ";
+	cin >> hour;
+	x.setrate(rate);
+	x.sethour(hour);
+
+	cout << "Enter pay rate for employee 2: $";
+	cin >> rate;
+	cout << "Enter hour for employee 2: ";
+	cin >> hour;
+	y.setrate(rate);
+	y.sethour(hour);
+	cout << "Gross pay for employees:" << endl;
+	cout <<"Employee 1: $"<< x.gettotal() << endl;
+	cout <<"Employee 2: $" << y.gettotal() << endl;
+}
