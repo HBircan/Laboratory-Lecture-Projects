@@ -1,0 +1,24 @@
+//This code gets the hours worked by 5 employees and stores them in an array.
+//Then gets the hourly payrate and calculates the grosspay for each employee.
+#include <iostream>
+using namespace std;
+
+int main () {
+	const int NUM_EMPLOYEES = 5;
+	int hours[NUM_EMPLOYEES];
+	double payrate;
+	double grosspay;
+
+	cout << "Enter hours worked by " << NUM_EMPLOYEES << " employees who all earn the same hourly rate.\n";
+	for (int i = 0; i < NUM_EMPLOYEES; i++) {
+		cout << "Employee #" << (i + 1) << ": ";
+		cin >> hours[i];
+	}
+	cout << "Enter the hourly payrate for all the employees: ";
+	cin >> payrate;
+	cout << "\nHere's the gross pay for each employee:\n";
+	for (int i = 0; i < NUM_EMPLOYEES; i++) {
+		grosspay = hours[i] * payrate;
+		cout << "Employee #" << (i + 1) << ": $" << grosspay << endl;
+	}
+}
