@@ -3,8 +3,7 @@ using namespace std;
 
 class Square {
 private:
-	int side;
-			
+	int side;		
 public:
 	Square();
 	Square(int);	
@@ -12,7 +11,6 @@ public:
 	int getSide(); 
 	int getArea(); 
 	int getPer();
-
 };
 Square::Square(int s) {
 	side = s;
