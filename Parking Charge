@@ -1,0 +1,37 @@
+// This program calculates the parking charge for 3 customer cars.
+// Up to 3 hours the charge is $3. Every hour past 3 is $0.50. 
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+
+double calculateCharges(double);
+
+int main(){
+       
+    cout << setprecision(2) << fixed;
+    cout << "Enter the hours parked for the three customers: ";
+    double hour1{ 0 }, hour2{ 0 }, hour3{ 0 };
+    cin >> hour1>>hour2>>hour3;
+    double thour = hour1+hour2+hour3;
+
+    double tcharge = calculateCharges(hour2) + calculateCharges(hour2) + calculateCharges(hour3);
+    cout << "Car" << setw(10) << "Hour" << setw(10) << "Charge";
+    
+    cout << "\n1." << setw(10) << hour1 <<  setw(10) << "$" << calculateCharges(hour1) ;
+    cout << "\n2." << setw(10) << hour2 <<  setw(10) << "$" << calculateCharges(hour2) ;
+    cout << "\n3." << setw(10) << hour3 <<  setw(10) << "$" << calculateCharges(hour3) ;
+    cout << "\nTOTAL" << setw(6) << thour <<  setw(10) << "$" << tcharge ;
+}
+
+double calculateCharges(double no) {
+    if (no <= 3) {
+        double charge = 3.00;
+        return charge;
+    }
+    else {
+        double charge = 3.00 + (no - 3) * 0.50;
+        return charge;
+    }
+    
+}
