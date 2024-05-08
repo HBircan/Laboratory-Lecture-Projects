@@ -1,0 +1,29 @@
+//This code asks user to enter some number of grades and prints out the avarage
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main(){
+
+   unsigned int student{ 0 };
+   int total{ 0 };
+   int grade{ 0 };
+
+   cout << "Enter  the grade or press -1: ";
+   cin >> grade;
+
+    while (grade != -1) {
+        total = total + grade;
+        ++student;
+        cout << "Enter  the grade or press -1: ";
+        cin >> grade;
+    }
+    if (student != 0) {
+        double avarage{ static_cast<double>(total) / student };
+        cout << setprecision(2) << fixed;
+        cout << "The avarage of " << student << " grades is " << avarage;
+    }
+    else {
+        cout << "There weren't any grades entered.";
+    }
+}
