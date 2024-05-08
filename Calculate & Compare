@@ -1,0 +1,53 @@
+//This code gets 3 integers from the user and calculates the sum, product and avarage of the numbers.
+//The program also determines the biggest and smallest number by using tha "if" operation.
+#include <iostream>
+using namespace std;
+
+int main(){
+    int no1{ 0 };
+    int no2{ 0 };
+    int no3{ 0 };
+    int sum{ 0 };
+    double avarage{ 0 };
+    int product{ 0 };
+
+    cout << "Enter the first integer number: ";
+    cin >> no1;
+    cout << "Enter the second integer number: ";
+    cin >> no2;
+    cout << "Enter the third integer number: ";
+    cin >> no3;
+
+    sum = no1 + no2 + no3;
+    product = no1 * no2 * no3;
+    avarage = static_cast<double>(sum) / 3;
+
+    cout << "\nSum is " << sum << endl;
+    cout << "Avarage is " << avarage << endl;
+    cout << "Product is " << product << endl;
+
+    if (no1 > no2 and no1 > no3){
+        cout << no1 << " is the largest number \n";
+        cout << no3 << " is the smallest number";
+    }
+    else if (no2 > no1 and no1 > no3) {
+        cout << no2 << " is the largest number \n";
+        cout << no3 << " is the smallest number";
+    }
+    else if (no1 > no3 and no3 > no2) {
+        cout << no1 << " is the largest number \n";
+        cout << no2 << " is the smallest number";
+    }
+    else if (no3 > no1 and no1 > no2) {
+        cout << no3 << " is the largest number \n";
+        cout << no2 << " is the smallest number";
+    }
+    else if (no3 > no2 and no2 > no1) {
+        cout << no3 << " is the largest number \n";
+        cout << no1 << " is the smallest number";
+    }
+    else if (no2 > no3 and no3 > no1) {
+        cout << no2 << " is the largest number \n";
+        cout << no1 << " is the smallest number";
+    }
+}
