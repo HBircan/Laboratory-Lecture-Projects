@@ -1,0 +1,14 @@
+//This program prints out the factorials of the numbers from 1 to 5.
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	unsigned int fact{ 1 };
+	cout << "Number"<< setw(25)<<"Factorial of the Number"<<endl;
+
+	for (unsigned int i{ 1 }; i <= 5;i++) {
+		fact *= i;
+		cout << setw(4) << i << setw(25) << fact << endl;
+	}
+}
