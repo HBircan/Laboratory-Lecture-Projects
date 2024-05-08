@@ -1,0 +1,91 @@
+// This code gets a letter from the user and displays it's order in the alphabet. 
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    char l{};
+    cout << "Enter a letter to see what order it is: ";
+    cin >> l;
+
+    switch (l) {
+    case'a':
+        cout << "It is the 1st letter in the alphabet.";
+     break;
+    case'b':
+        cout << "It is the 2nd letter in the alphabet.";
+        break;
+    case'c':
+        cout << "It is the 3rd letter in the alphabet.";
+        break;
+    case'd':
+        cout << "It is the 4th letter in the alphabet.";
+        break;
+    case'e':
+        cout << "It is the 5th letter in the alphabet.";
+        break;
+    case'f':
+        cout << "It is the 6th letter in the alphabet.";
+        break;
+    case'g':
+        cout << "It is the 7th letter in the alphabet.";
+        break;
+    case'h':
+        cout << "It is the 8th letter in the alphabet.";
+        break;
+    case'i':
+        cout << "It is the 9th letter in the alphabet.";
+        break;
+    case'j':
+        cout << "It is the 10th letter in the alphabet.";
+        break;
+    case'k':
+        cout << "It is the 11th letter in the alphabet.";
+        break;
+    case'l':
+        cout << "It is the 12th letter in the alphabet.";
+        break;
+    case'm':
+        cout << "It is the 13th letter in the alphabet.";
+        break;
+    case'n':
+        cout << "It is the 14th letter in the alphabet.";
+        break;
+    case'o':
+        cout << "It is the 15th letter in the alphabet.";
+        break;
+    case'p':
+        cout << "It is the 16th letter in the alphabet.";
+        break;
+    case'q':
+        cout << "It is the 17th letter in the alphabet.";
+        break;
+    case'r':
+        cout << "It is the 18th letter in the alphabet.";
+        break;
+    case's':
+        cout << "It is the 19th letter in the alphabet.";
+        break;
+    case't':
+        cout << "It is the 20th letter in the alphabet.";
+        break;
+    case'u':
+        cout << "It is the 21th letter in the alphabet.";
+        break;
+    case'v':
+        cout << "It is the 22th letter in the alphabet.";
+        break;
+    case'w':
+        cout << "It is the 23th letter in the alphabet.";
+        break;
+    case'x':
+        cout << "It is the 24th letter in the alphabet.";
+        break;
+    case'y':
+        cout << "It is the 25th letter in the alphabet.";
+        break;
+    case'z':
+        cout << "It is the 26th letter in the alphabet.";
+        break;
+    }
+}
