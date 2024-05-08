@@ -1,0 +1,16 @@
+//This code gets 6 employees work hours, stores them in an array and prints the array.
+#include <iostream>
+using namespace std;
+int main () {
+const int employee = 6;
+int hours[employee];
+for (int i = 0; i < employee; i++) {
+	cout << "Enter the hours worked by employe " << (i + 1) << ": ";
+	cin >> hours[i];
+ }
+
+cout << "The numbers you entered are: ";
+for (int i = 0; i < employee; i++) {
+	cout << hours[i]<<" ";
+ }
+}
